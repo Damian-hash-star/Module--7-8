@@ -1,0 +1,39 @@
+# Open the file
+employee_file = open("employees.txt" , "r")
+
+total_bonus = 0
+
+print("Employee Bonus Report")
+print("-----------------------------")
+
+for line in employee_file:
+  data = line.split()
+
+  last_name = data[0]
+  salary = float(data[1])
+
+  # Determine bonus rate
+  if salary > 100000:
+    bonus_rate = 0.20
+  elif salary >= 50000
+    bonus_rate = 0.15
+  else:
+    bonus_rate = 0.10
+
+  # Calculate bonus
+  bonus = salary * bonus_rate
+
+  # Add to total bonuses
+  total_bonus += bonus
+
+  # Display employee information
+  print("Last Name:", last_name)
+  print("Salary: $", format(salary, ".2f"))
+  print("Bonus: $", format(bonus, ".2f"))
+  print()
+
+# Display total bonuses paid
+print("Total bonuses Paid: $", format(total_bonus,bonus, ".2f"))
+
+# Close the file
+employee_file.close()
