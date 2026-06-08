@@ -23,7 +23,7 @@ for line in employee_file:
   # Calculate bonus
   bonus = salary * bonus_rate
 
-  # Add to total bonuses
+  # Accumulate total bonuses
   total_bonus += bonus
 
   # Display employee information
@@ -33,6 +33,7 @@ for line in employee_file:
   print()
 
 # Display total bonuses paid
+print("---------------------------------------------")
 print("Total bonuses Paid: $", format(total_bonus,bonus, ".2f"))
 
 # Close the file
