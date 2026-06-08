@@ -1,0 +1,37 @@
+# Open the file
+order_file = open("orders.txt", "r")
+
+total extended = 0
+order_counr = 0
+
+print("Order Report")
+print("----------------------------------------------")
+print("Item\t\tQty\tPrice\t\tExtended Price")
+
+for line in order_file:
+  data = line.split()
+
+  item = data[0]
+  quantity = int(data[1])
+  price = float(data[2])
+
+  # Calculate extended price 
+  extended_price = quantity * price
+
+  # Update totals 
+  total_extended += extended_price
+  order_count += 1
+
+  # Display order infomation
+  print(item, "\t", quantity, "\t$", format(price, ".2f"), "\t\t$", format(extended_price, ".2f"))
+
+# Calculate average order
+average_order = total_extended / order_count
+
+print("----------------------------------------------------")
+print("Total Extended Prices: $", format(total_extended, ".2f"))
+print("Number of Order:", order_count)
+print("Average Order: $", format(average_order, ".2f"))
+
+# Close the file
+order_file.close()
