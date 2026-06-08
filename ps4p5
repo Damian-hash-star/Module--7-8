@@ -1,0 +1,40 @@
+# Open the file
+student_file = open("students.txt", "r")
+
+total_tuition = 0
+student_count = 0
+
+print("Student Tuition Report"
+print("----------------------------------------")
+print("Last Name\tCredits\tTuition Owed")
+
+for line in student_file:
+  data = line.split()
+
+  last_name = data[0]
+  district_code = data[1]
+  credits = int(data[2])
+
+  # Determine cost per credit
+  if district_code == "I":
+      cost_per_cerdit = 250.00
+  else:
+      cost_per_credit = 500.00
+
+  # Calculate tuition
+  tuition = credits * cost_per_credit
+
+  # Accumulate totals
+  total_tuition += tuition
+  student_count += 1
+
+  # Display student infomation
+  print(last_name, "\t\t", credits, "\t$", format(tuition, ".2f")
+
+# Display totals
+print("----------------------------------------")
+print("Total Tuition Owed: $", format(total_tuition, ".2f"))
+print("Number of Students:", student_count)
+
+# Close the file
+student_file.close()
