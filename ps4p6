@@ -1,0 +1,30 @@
+# Ask the user if they want to start
+answer = input("Do you want to enter student data? (Yes to continue): ")
+
+student_count = 0
+
+while answer == "Yes":
+
+    # Input student infomation
+    last_name = input("Enter stdent's last name: ")
+    exam1 = float(input("Enter first exam score: "))
+    exam2 = float(input("Enter second exam score: "))
+
+    # Compute average
+    average = (exam1 + exam2) / 2
+
+    # Display results
+    print(\nStudent Infomation")
+    print("Last Name:", last_name)
+    print("Average Score:", format(average, ".2f"))
+    print()
+
+    # Count the student
+    student_count += 1
+
+    # Ask if the user wants to continue
+    answer = input("Do you want to enter another student? (Yes to continue): ")
+
+# Display total number of stdents entered
+print("\nProgram Finished")
+print("Number of Students Entered:", student_count)
