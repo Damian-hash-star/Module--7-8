@@ -1,8 +1,8 @@
 # Open the file
 order_file = open("orders.txt", "r")
 
-total extended = 0
-order_counr = 0
+total_extended = 0
+order_count = 0
 
 print("Order Report")
 print("----------------------------------------------")
