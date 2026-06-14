@@ -4,7 +4,7 @@ student_file = open("students.txt", "r")
 total_tuition = 0
 student_count = 0
 
-print("Student Tuition Report"
+print("Student Tuition Report")
 print("----------------------------------------")
 print("Last Name\tCredits\tTuition Owed")
 
@@ -29,7 +29,7 @@ for line in student_file:
   student_count += 1
 
   # Display student infomation
-  print(last_name, "\t\t", credits, "\t$", format(tuition, ".2f")
+  print(last_name, "\t\t", credits, "\t$", format(tuition, ".2f"))
 
 # Display totals
 print("----------------------------------------")
